@@ -52,4 +52,4 @@ You do not need to extract assets again for subsequent builds. The resulting `.a
 
 `npm test` checks all four model skeletons, animation bindings, foot planting, rest sequences and Dock placement. These checks require locally prepared assets.
 
-The native shell uses AppKit and WKWebView; rendering uses Three.js. See the [technical notes](docs/TECHNICAL_NOTES.md) for extraction, materials, antialiasing and diagnostic flags, and the [third-party notices](docs/THIRD_PARTY_NOTICES.md).
+The native shell uses AppKit and WKWebView; rendering uses Three.js. See the [action audit](docs/ACTION_AUDIT.md) for verified menu behaviour and the [technical notes](docs/TECHNICAL_NOTES.md) for extraction, materials, antialiasing and diagnostic flags, and the [third-party notices](docs/THIRD_PARTY_NOTICES.md).

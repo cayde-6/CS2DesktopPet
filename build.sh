@@ -16,7 +16,7 @@ for library in ('behaviors','poses','showcase','held'):
  shutil.copy2('Assets/'+library+'.glb',app/'Resources'/(library+'.glb'))
 shutil.copy2('Sources/animations.json',app/'Resources/animations.json')
 shutil.copytree('Assets/Sounds',app/'Resources/Sounds',dirs_exist_ok=True)
-with (app/'Info.plist').open('wb') as f:plistlib.dump({'CFBundleExecutable':'CS2Pet','CFBundleIdentifier':'local.maxime.cs2pet','CFBundleName':'CS2 Pet','CFBundleDisplayName':'CS2 Pet','CFBundlePackageType':'APPL','CFBundleShortVersionString':'1.3.0','CFBundleVersion':'8','LSUIElement':True,'LSMinimumSystemVersion':'13.0','NSHighResolutionCapable':True,'NSSupportsAutomaticGraphicsSwitching':True},f)
+with (app/'Info.plist').open('wb') as f:plistlib.dump({'CFBundleExecutable':'CS2Pet','CFBundleIdentifier':'local.maxime.cs2pet','CFBundleName':'CS2 Pet','CFBundleDisplayName':'CS2 Pet','CFBundlePackageType':'APPL','CFBundleShortVersionString':'1.3.1','CFBundleVersion':'9','LSUIElement':True,'LSMinimumSystemVersion':'13.0','NSHighResolutionCapable':True,'NSSupportsAutomaticGraphicsSwitching':True},f)
 PY
 swiftc Sources/main.swift Sources/placement.swift -o "build/CS2 Pet.app/Contents/MacOS/CS2Pet" -framework AppKit -framework WebKit -O
 codesign --force --deep --sign - "build/CS2 Pet.app"

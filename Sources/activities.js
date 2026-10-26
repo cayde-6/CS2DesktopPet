@@ -18,9 +18,10 @@ export class PetActivities {
     let stages;
     switch(kind) {
       case 'sit':stages=rest('chick_squat_loop01',8+this.random()*6);break;
-      case 'lie':stages=rest('chick_squat_loop04',10+this.random()*6);break;
+      case 'lie':stages=rest('chick_squat_loop02',10+this.random()*6);break;
       case 'sleep':stages=rest('chick_sleep_loop01',18+this.random()*12);break;
-      case 'preen':stages=[once('chick_idle02')];break;
+      // Visually audited: idle02 scratches/pecks the ground; trick10 cleans a wing.
+      case 'preen':stages=[once('chick_trick10')];break;
       case 'peck':stages=[once('chick_idle01')];break;
       case 'chirp':stages=[{...loop('calm_idle',1.2),sound:true}];break;
       case 'groom':stages=rest('chick_squat_loop03',8.7);break;

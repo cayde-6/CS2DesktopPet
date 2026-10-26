@@ -44,8 +44,8 @@ const rootPaths=new Map(),travelDelta=new THREE.Vector3(),travelPoint=new THREE.
 function setCameraHalf(half){camera.left=-half;camera.right=half;camera.top=half;camera.bottom=-half;camera.updateProjectionMatrix();}
 const footPlant=new FootPlant();let soles,plantState;
 let groundSampler,lastFloorOffset=-Infinity;
-let captureFrame=0,captureLimit=0,lastCapture=-Infinity;
-window.petCapture=count=>{captureFrame=0;captureLimit=count;lastCapture=-Infinity;};
+let captureFrame=0,captureLimit=0,lastCapture=-Infinity,captureStationary=false;
+window.petCapture=(count,stationary=false)=>{captureFrame=0;captureLimit=count;lastCapture=-Infinity;captureStationary=stationary;};
 const nodAxis=new THREE.Vector3(0,0,1),nodQuaternion=new THREE.Quaternion();
 const loader = new GLTFLoader();
 const decode=base64=>Uint8Array.from(atob(base64),c=>c.charCodeAt(0)).buffer;
@@ -225,19 +225,20 @@ window.petNextQuality=()=>{
   if(++qualityIndex<qualityProfiles.length){qualityPreview=qualityProfiles[qualityIndex];setRenderQuality(qualityPreview);qualityFrame(qualityPreview);return;}
   qualityPreview=null;setRenderQuality('after');mixer.stopAllAction();current=null;routine();previewing=false;report('quality_done',true);
 };
-window.petPreviewActions=async()=>{
+window.petPreviewActions=async({audit=false}={})=>{
   previewing=true;
   for(const key of ['poses','showcase','held']){installClips(await requestLibrary(key));installedLibraries.add(key);}
   activities=makeActivities();window.petQA(true);
   const names=animationCatalog.map(e=>e.name);
-  for(const name of names)for(const fraction of [0.25,0.65]) {
+  const fractions=audit?Array.from({length:10},(_,i)=>i/10):[0.25,0.65];
+  for(const name of names)for(const fraction of fractions) {
     mixer.stopAllAction();current=null;
     const action=actions[name];action.reset().setEffectiveWeight(1).play();
     model.position.copy(modelHome).add(clipOffsets[name]??new THREE.Vector3());
     mixer.setTime(action.getClip().duration*fraction);pivot.rotation.y=1.1;setCameraHalf(clipFraming[name]??baseCameraHalf);
-    model.updateWorldMatrix(true,true);petRenderer.render(scene,camera);
+    pivot.updateMatrixWorld(true);petRenderer.render(scene,camera);
     const category=name.includes('/viewmodel/')?'held':name.split('/')[3];
-    report('preview',{label:category+'_'+name.split('/').pop()+'_'+Math.round(fraction*100),png:renderer.domElement.toDataURL('image/png')});
+    report('preview',{audit,label:category+'_'+name.split('/').pop()+'_'+Math.round(fraction*100),clip:name,fraction,duration:action.getClip().duration,png:renderer.domElement.toDataURL('image/png')});
     await new Promise(requestAnimationFrame);
   }
   mixer.stopAllAction();current=null;gaitMoving=false;footPlant.reset();cameraHalf=baseCameraHalf;setCameraHalf(cameraHalf);routine();previewing=false;
@@ -359,9 +360,10 @@ function frame(now) {
     if(Number.isFinite(offset)&&Math.abs(offset-lastFloorOffset)>0.2){lastFloorOffset=offset;report('floor',offset);}
   }
   if(walk||path)report('step',step);
-  if(walk&&captureFrame<captureLimit&&now-lastCapture>=100){
+  if((walk||captureStationary)&&captureFrame<captureLimit&&now-lastCapture>=100){
     lastCapture=now;
-    report('capture',{frame:++captureFrame,png:renderer.domElement.toDataURL('image/png'),time:now,plant:plantState});
+    report('capture',{frame:++captureFrame,png:renderer.domElement.toDataURL('image/png'),time:now,plant:plantState,activity:activities?.kind,clip:current?.getClip().name,clipTime:current?.time});
+    if(captureFrame===captureLimit)report('capture_done',true);
   }
 }
 requestAnimationFrame(frame);

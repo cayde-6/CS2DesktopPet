@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {PetActivities} from '../Sources/activities.js';
 import {loadForAnalysis} from './model-for-analysis.mjs';
 import fs from 'node:fs';
+import {AnimationMixer,Vector3} from 'three';
 const catalog=JSON.parse(fs.readFileSync('Sources/animations.json'));
 
 const model=await loadForAnalysis('chick'),extra=await loadForAnalysis('behaviors');
@@ -50,6 +51,32 @@ function harness() {
 }
 for(const kind of ['sit','lie','sleep','groom','preen','peck','chirp','trick','run','runflap','hop','look',...Array.from({length:13},(_,i)=>'trick:'+(i+1)),...catalog.map(e=>'clip:'+e.name)]) {
   const {activities:a}=harness();assert(a.start(kind),`missing animation required by ${kind}`);
+}
+// Regression for the visually audited Preen command: the beak approaches a wing
+// above the ground. Ground scratching/pecking (the previous binding) fails this.
+{
+  const {activities:a,played}=harness();a.start('preen');
+  const selected=clips.find(c=>c.name===played.at(-1).name);
+  for(const bird of allModels) {
+    const mixer=new AnimationMixer(bird.scene);
+    const point=name=>bird.scene.getObjectByName(name).getWorldPosition(new Vector3());
+    const baseline=clips.find(c=>c.name.endsWith('/world/chick_idle01'));
+    mixer.clipAction(baseline).reset().play();mixer.setTime(0);bird.scene.updateMatrixWorld(true);
+    const floor=point('foot_L').y,standing=point('beak');
+    const wingDistance=()=>Math.min(...['wing_1_L','wing_1_R'].map(name=>point('beak').distanceTo(point(name))));
+    const baselineWing=wingDistance();
+    mixer.stopAllAction();mixer.clipAction(selected).reset().play();
+    let minimumHeight=Infinity,minimumWing=Infinity;
+    for(let i=0;i<120;i++) {
+      mixer.setTime(selected.duration*i/120);bird.scene.updateMatrixWorld(true);
+      minimumHeight=Math.min(minimumHeight,point('beak').y-floor);
+      minimumWing=Math.min(minimumWing,wingDistance());
+    }
+    // Allow the finishing wing shake to dip the head, while excluding ground pecks.
+    assert(minimumHeight>(standing.y-floor)*0.3,'Preen must not lower the beak to peck the ground');
+    assert(minimumWing<baselineWing*0.65,'Preen must bring the beak towards the wing');
+    mixer.stopAllAction();mixer.uncacheRoot(bird.scene);
+  }
 }
 {
   const {activities:a,played}=harness();a.start('peck');

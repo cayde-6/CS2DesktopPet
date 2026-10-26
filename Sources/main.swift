@@ -139,6 +139,8 @@ final class PetController: NSObject, WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         guard let obj=message.body as? [String:Any],let type=obj["type"] as? String else { return }
         if type=="quality_done" && ProcessInfo.processInfo.arguments.contains("--render-exit") { NSApp.terminate(nil);return }
+        if type=="preview_done" && ProcessInfo.processInfo.arguments.contains("--render-exit") { NSApp.terminate(nil);return }
+        if type=="capture_done" && ProcessInfo.processInfo.arguments.contains("--render-exit") { NSApp.terminate(nil);return }
         if type=="library",let key=obj["value"] as? String {
             guard ["behaviors","poses","showcase","held"].contains(key) else { return }
             loadAnimationLibrary(key);return
@@ -166,9 +168,13 @@ final class PetController: NSObject, WKScriptMessageHandler {
             guard let value=obj["value"] as? [String:Any],let label=value["label"] as? String,
                   let png=value["png"] as? String,let encoded=png.split(separator:",").last,
                   let data=Data(base64Encoded:String(encoded)) else { return }
-            let folder=URL(fileURLWithPath:"/tmp/cs2-pet-actions-preview",isDirectory:true)
+            let folder=URL(fileURLWithPath:value["audit"] as? Bool == true ? "/tmp/cs2-pet-actions-audit":"/tmp/cs2-pet-actions-preview",isDirectory:true)
             try? FileManager.default.createDirectory(at:folder,withIntermediateDirectories:true)
             try? data.write(to:folder.appendingPathComponent(label+".png"))
+            var metadata=value;metadata.removeValue(forKey:"png")
+            if let json=try? JSONSerialization.data(withJSONObject:metadata,options:[.sortedKeys]) {
+                try? json.write(to:folder.appendingPathComponent(label+".json"))
+            }
             return
         }
         if type=="capture" {
@@ -180,7 +186,7 @@ final class PetController: NSObject, WKScriptMessageHandler {
             try? FileManager.default.createDirectory(at:folder,withIntermediateDirectories:true)
             let filename=String(format:"%03d.png",frame)
             try? data.write(to:folder.appendingPathComponent(filename))
-            let record:[String:Any]=["frame":frame,"file":filename,"x":panel.frame.minX,"y":panel.frame.minY,"width":panel.frame.width,"height":panel.frame.height,"time":value["time"] ?? 0,"plant":value["plant"] ?? NSNull(),"dockY":currentScreen().visibleFrame.minY,"floorOffset":floorOffset,"attachedToDock":attachedToDock]
+            let record:[String:Any]=["frame":frame,"file":filename,"x":panel.frame.minX,"y":panel.frame.minY,"width":panel.frame.width,"height":panel.frame.height,"time":value["time"] ?? 0,"plant":value["plant"] ?? NSNull(),"dockY":currentScreen().visibleFrame.minY,"floorOffset":floorOffset,"attachedToDock":attachedToDock,"activity":value["activity"] ?? NSNull(),"clip":value["clip"] ?? NSNull(),"clipTime":value["clipTime"] ?? NSNull()]
             if let json=try? JSONSerialization.data(withJSONObject:record) {
                 try? json.write(to:folder.appendingPathComponent(String(format:"%03d.json",frame)))
             }
@@ -232,6 +238,7 @@ final class PetController: NSObject, WKScriptMessageHandler {
             previousState=""; sendState(moving:false)
             if ProcessInfo.processInfo.arguments.contains("--qa") { js("window.petQA(false)") }
             if ProcessInfo.processInfo.arguments.contains("--preview-actions") { js("window.petPreviewActions()") }
+            if ProcessInfo.processInfo.arguments.contains("--audit-actions") { js("window.petPreviewActions({audit:true})") }
             if ProcessInfo.processInfo.arguments.contains("--quality-compare") { js("window.petQualityComparison()") }
             if let action=ProcessInfo.processInfo.arguments.first(where:{$0.hasPrefix("--do-action=")}) {
                 doAction(action.replacingOccurrences(of:"--do-action=",with:""))
@@ -240,7 +247,9 @@ final class PetController: NSObject, WKScriptMessageHandler {
                 captureStarted=true;direction=1
                 let area=currentScreen().visibleFrame
                 panel.setFrameOrigin(NSPoint(x:area.minX+20,y:panel.frame.minY));preciseX=nil
-                doAction(capture.replacingOccurrences(of:"--capture-action=",with:""));js("window.petCapture(36)")
+                let countArgument=ProcessInfo.processInfo.arguments.first(where:{$0.hasPrefix("--capture-count=")})?.replacingOccurrences(of:"--capture-count=",with:"")
+                let count=min(600,max(1,countArgument.flatMap(Int.init) ?? 36))
+                doAction(capture.replacingOccurrences(of:"--capture-action=",with:""));js("window.petCapture(\(count),true)")
             }
             if ProcessInfo.processInfo.arguments.contains("--no-fur") { js("window.petFurEnabled(false)") }
             if ProcessInfo.processInfo.arguments.contains("--snapshot") {
@@ -282,7 +291,7 @@ final class PetController: NSObject, WKScriptMessageHandler {
         panel.ignoresMouseEvents = !dragging && (dx*dx+dy*dy>1 || p.y<f.minY+floorOffset-2)
         if attachedToDock && !dragging { alignToDock() }
         guard !paused && !sleeping && !dragging && !activityBusy else { sendState(moving:false); return }
-        if autonomous && now>=nextActionAt && !wasMoving && !ProcessInfo.processInfo.arguments.contains("--preview-actions") {
+        if autonomous && now>=nextActionAt && !wasMoving && !ProcessInfo.processInfo.arguments.contains("--preview-actions") && !ProcessInfo.processInfo.arguments.contains("--audit-actions") {
             var options=["chirp","chirp","chirp","peck","peck","preen","preen","look","sit","lie","sleep","trick"]
             if roaming { options += ["hop","run"] }
             doAction(options.randomElement()!,automatic:true);return
@@ -342,7 +351,7 @@ final class PetController: NSObject, WKScriptMessageHandler {
         for (idx,bird) in birds.enumerated() { submenu.addItem(item(bird.1,#selector(chooseBird(_:)),tag:idx,checked:selected==bird.0)) }
         choose.submenu=submenu;m.addItem(choose)
         let actionItem=NSMenuItem(title:"Actions",action:nil,keyEquivalent:"");let actionMenu=NSMenu()
-        for (title,kind) in [("Sit","sit"),("Lie down","lie"),("Sleep","sleep"),("Preen","preen"),("Peck","peck"),("Chirp","chirp"),("Preen while sitting","groom"),("Look around","look"),("Hop","hop"),("Run","run"),("Run with wings out","runflap")] {
+        for (title,kind) in [("Sit","sit"),("Doze","lie"),("Sleep","sleep"),("Preen","preen"),("Peck","peck"),("Chirp","chirp"),("Preen while sitting","groom"),("Look around","look"),("Hop","hop"),("Run","run"),("Run with wings out","runflap")] {
             let i=item(title,#selector(performActivity(_:)));i.representedObject=kind;actionMenu.addItem(i)
         }
         actionMenu.addItem(.separator())
@@ -380,7 +389,7 @@ final class PetController: NSObject, WKScriptMessageHandler {
     }
     func refreshMenu() {
         status.menu=makeMenu();status.button?.title=selected=="chick" ? "🐥":"🐔"
-        var names=["sit":"sitting","lie":"lying down","sleep":"sleeping","preen":"preening","peck":"pecking","chirp":"chirping","groom":"preening while sitting","look":"looking around","hop":"hopping","run":"running","runflap":"running with wings out"]
+        var names=["sit":"sitting","lie":"dozing","sleep":"sleeping","preen":"preening","peck":"pecking","chirp":"chirping","groom":"preening while sitting","look":"looking around","hop":"hopping","run":"running","runflap":"running with wings out"]
         for entry in animationCatalog { names["clip:"+entry.name]=entry.label }
         status.button?.toolTip=activityName.map { "CS2 Pet — \(names[$0] ?? "performing a trick")" } ?? "CS2 Pet — desktop companion"
     }

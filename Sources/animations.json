@@ -271,7 +271,7 @@
   },
   {
     "name": "animation/anims/chicken/ui/chickbaby_egg_hatch01alt_loop",
-    "label": "Hatching — 1, variation — loop",
+    "label": "After hatching — 1, variation — loop",
     "group": "Game scenes",
     "library": "showcase",
     "loop": true,
@@ -289,7 +289,7 @@
   },
   {
     "name": "animation/anims/chicken/ui/chickbaby_egg_hatch02_loop",
-    "label": "Hatching — 2 — loop",
+    "label": "After hatching — 2 — loop",
     "group": "Game scenes",
     "library": "showcase",
     "loop": true,
@@ -334,7 +334,7 @@
   },
   {
     "name": "animation/anims/chicken/world/chick_0lr",
-    "label": "Step in place",
+    "label": "Neutral stance",
     "group": "Movement",
     "library": "behaviors",
     "loop": false,
@@ -451,7 +451,7 @@
   },
   {
     "name": "animation/anims/chicken/world/chick_idle02",
-    "label": "Preening",
+    "label": "Scratch and peck",
     "group": "Behaviours",
     "library": "behaviors",
     "loop": true,
@@ -694,7 +694,7 @@
   },
   {
     "name": "animation/anims/chicken/world/chick_squat_loop02",
-    "label": "Sitting — variation 2",
+    "label": "Dozing",
     "group": "Rest",
     "library": "behaviors",
     "loop": true,
@@ -712,7 +712,7 @@
   },
   {
     "name": "animation/anims/chicken/world/chick_squat_loop04",
-    "label": "Lying down",
+    "label": "Pecking while sitting",
     "group": "Rest",
     "library": "behaviors",
     "loop": true,
@@ -829,7 +829,7 @@
   },
   {
     "name": "animation/anims/chicken/world/chick_trick10",
-    "label": "Trick 10",
+    "label": "Trick 10 — preening",
     "group": "Tricks",
     "library": "behaviors",
     "loop": false,

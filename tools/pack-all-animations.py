@@ -95,13 +95,13 @@ def pack(animations,target):
  Path('Assets/'+target+'.glb').write_bytes(data);print(target,len(result),round(len(data)/1048576,2),'MiB')
 
 labels={
- 'chick_idle01':'Pecking','chick_idle02':'Preening','chick_idle03':'Look around — 1','chick_idle03alt':'Look around — 2',
+ 'chick_idle01':'Pecking','chick_idle02':'Scratch and peck','chick_idle03':'Look around — 1','chick_idle03alt':'Look around — 2',
  'chick_idle04':'Behaviour — 4','chick_idle05':'Behaviour — 5','chick_idle06':'Behaviour — 6','chick_idle07':'Behaviour — 7',
  'chick_walk':'Walking','chick_start_walk':'Start walking','chick_run':'Running','chick_runflap':'Running with wings out','chick_hop':'Hop',
- 'chick_fall_flap':'Flap while falling','chick_land':'Landing','chick_0lr':'Step in place',
+ 'chick_fall_flap':'Flap while falling','chick_land':'Landing','chick_0lr':'Neutral stance',
  'chick_idle01_water':'Resting on water','chick_walk_swim':'Swimming','chick_run_swim':'Fast swimming','chick_land_water':'Water landing',
  'chick_sleep_loop01':'Sleeping','chick_squat_start':'Sit down','chick_squat_stand':'Stand up','chick_squat_loop01':'Sitting',
- 'chick_squat_loop02':'Sitting — variation 2','chick_squat_loop03':'Preening while sitting','chick_squat_loop04':'Lying down',
+ 'chick_squat_loop02':'Dozing','chick_squat_loop03':'Preening while sitting','chick_squat_loop04':'Pecking while sitting',
  'chick_feed01':'Feeding the chicken','chickbaby_feed02':'Feeding the chick',
  'chick_feed_to_sad01':'Sad chicken','chickbaby_feed_to_sad02':'Sad chick',
  'chick_reveal':'Reveal — 1','chick_reveal02':'Reveal — 2',
@@ -123,11 +123,15 @@ for name,a in sorted(source.items()):
   label=labels.get(leaf.removesuffix('_loop'))
   if '_shoulder_' in leaf:label='On shoulder — '+str(int(leaf[-2:]))
   assert label,leaf
-  if leaf.endswith('_loop'):label+=' — loop'
+  if leaf.endswith('_loop'):
+   label=label.replace('Hatching','After hatching')
+   label+=' — loop'
   group='Game scenes'
  else:
   label=labels.get(leaf)
-  if '_trick' in leaf:label='Trick '+str(int(leaf[-2:]));group='Tricks'
+  if '_trick' in leaf:
+   label='Trick '+str(int(leaf[-2:]));group='Tricks'
+   if leaf=='chick_trick10':label+=' — preening'
   elif '_react' in leaf:label='Reaction '+str(int(leaf[-2:]));group='Reactions'
   elif '_scared' in leaf:label='Startle '+str(int(leaf[-2:]));group='Reactions'
   elif '_flinch' in leaf:
