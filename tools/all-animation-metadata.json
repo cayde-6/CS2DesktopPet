@@ -1,0 +1,622 @@
+{
+  "animation/anims/chicken/world/chick_idle01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 192
+  },
+  "animation/anims/chicken/world/chick_idle02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 260
+  },
+  "animation/anims/chicken/world/chick_idle03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 260
+  },
+  "animation/anims/chicken/world/chick_idle03alt.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1050
+  },
+  "animation/anims/chicken/world/chick_idle01_water.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 380
+  },
+  "animation/anims/chicken/world/chick_squat_start.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 20
+  },
+  "animation/anims/chicken/world/chick_squat_stand.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 29
+  },
+  "animation/anims/chicken/world/chick_squat_loop01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 231
+  },
+  "animation/anims/chicken/world/chick_squat_loop03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 261
+  },
+  "animation/anims/chicken/world/chick_squat_loop04.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 261
+  },
+  "animation/anims/chicken/world/chick_start_walk.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 17
+  },
+  "animation/anims/chicken/world/chick_walk.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 39
+  },
+  "animation/anims/chicken/world/chick_walk_swim.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 20
+  },
+  "animation/anims/chicken/world/chick_run.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 37
+  },
+  "animation/anims/chicken/world/chick_runflap.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 37
+  },
+  "animation/anims/chicken/world/chick_run_swim.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 37
+  },
+  "animation/anims/chicken/world/chick_fall_flap.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 20
+  },
+  "animation/anims/chicken/world/chick_land.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 23
+  },
+  "animation/anims/chicken/world/chick_land_water.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 23
+  },
+  "animation/anims/chicken/world/chick_react01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 48
+  },
+  "animation/anims/chicken/world/chick_react02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 55
+  },
+  "animation/anims/chicken/world/chick_180r.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 30
+  },
+  "animation/anims/chicken/world/chick_135r.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 24
+  },
+  "animation/anims/chicken/world/chick_90r.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 18
+  },
+  "animation/anims/chicken/world/chick_45r.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 12
+  },
+  "animation/anims/chicken/world/chick_0lr.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 25
+  },
+  "animation/anims/chicken/world/chick_45l.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 12
+  },
+  "animation/anims/chicken/world/chick_90l.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 18
+  },
+  "animation/anims/chicken/world/chick_135l.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 24
+  },
+  "animation/anims/chicken/world/chick_180.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 30
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_04.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_05.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_06.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_07.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_08_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_09_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_10_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_01_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_02_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_04_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_05_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/ui/chick_reveal.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 670
+  },
+  "animation/anims/chicken/ui/chick_reveal02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 598
+  },
+  "animation/anims/chicken/ui/chickbaby_egg_hatch01alt.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 754
+  },
+  "animation/anims/chicken/ui/chickbaby_egg_hatch02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 538
+  },
+  "animation/anims/chicken/ui/chick_reveal_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 316
+  },
+  "animation/anims/chicken/ui/chick_reveal02_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 432
+  },
+  "animation/anims/chicken/ui/chickbaby_egg_hatch01alt_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 436
+  },
+  "animation/anims/chicken/ui/chickbaby_egg_hatch02_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 267
+  },
+  "animation/anims/chicken/ui/chickbaby_feed02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 719
+  },
+  "animation/anims/chicken/ui/chick_feed01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 745
+  },
+  "animation/anims/chicken/ui/chick_retirement01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 216
+  },
+  "animation/anims/chicken/ui/chick_retirement02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 184
+  },
+  "animation/anims/chicken/ui/chick_retirement02_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 184
+  },
+  "animation/anims/chicken/ui/chick_shoulder_01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 411
+  },
+  "animation/anims/chicken/ui/chick_shoulder_02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 411
+  },
+  "animation/anims/chicken/ui/chick_shoulder_03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 449
+  },
+  "animation/anims/viewmodel/chicken/chickbaby_draw.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 54
+  },
+  "animation/anims/viewmodel/chicken/chick_draw.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 128
+  },
+  "animation/anims/viewmodel/chicken/chickbaby_idle01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 188
+  },
+  "animation/anims/viewmodel/chicken/chick_idle01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 225
+  },
+  "animation/anims/viewmodel/chicken/chickbaby_idle02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 430
+  },
+  "animation/anims/viewmodel/chicken/chick_idle02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 446
+  },
+  "animation/anims/chicken/world/chick_sleep_loop01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 337
+  },
+  "animation/anims/chicken/ui/chickbaby_feed_to_sad02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 972
+  },
+  "animation/anims/chicken/ui/chick_feed_to_sad01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 1200
+  },
+  "animation/anims/chicken/ui/chickbaby_feed_to_sad02_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 306
+  },
+  "animation/anims/chicken/ui/chick_feed_to_sad01_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 184
+  },
+  "animation/anims/chicken/world/chick_trick01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 79
+  },
+  "animation/anims/chicken/world/chick_trick03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 223
+  },
+  "animation/anims/chicken/world/chick_trick04.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 224
+  },
+  "animation/anims/chicken/world/chick_trick08.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 119
+  },
+  "animation/anims/chicken/world/chick_trick09.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 80
+  },
+  "animation/anims/chicken/world/chick_trick10.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 220
+  },
+  "animation/anims/chicken/world/chick_trick02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 101
+  },
+  "animation/anims/chicken/world/chick_trick05.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 75
+  },
+  "animation/anims/chicken/world/chick_trick06.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 176
+  },
+  "animation/anims/chicken/world/chick_trick07.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 232
+  },
+  "animation/anims/chicken/world/chick_trick11.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 430
+  },
+  "animation/anims/chicken/world/chick_trick12.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 97
+  },
+  "animation/anims/chicken/world/chick_trick13.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 115
+  },
+  "animation/anims/chicken/world/chick_sleep_flinch01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": true,
+    "frames": 18
+  },
+  "animation/anims/chicken/world/chick_sleep_flinch02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": true,
+    "frames": 12
+  },
+  "animation/anims/chicken/world/chick_sleep_flinch03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": true,
+    "frames": 15
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char01_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char02_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char04.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char04_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char05.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char05_adolescent.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char06.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char07.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char08_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char09_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/snapshot/chick_snapshots_char10_baby.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 1
+  },
+  "animation/anims/chicken/ui/chick_feed01_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 480
+  },
+  "animation/anims/chicken/ui/chickbaby_egg_hatch01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 236
+  },
+  "animation/anims/chicken/ui/chickbaby_feed02_loop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 307
+  },
+  "animation/anims/chicken/world/chick_hop.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 18
+  },
+  "animation/anims/chicken/world/chick_idle04.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 301
+  },
+  "animation/anims/chicken/world/chick_idle05.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 320
+  },
+  "animation/anims/chicken/world/chick_idle06.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 345
+  },
+  "animation/anims/chicken/world/chick_idle07.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 164
+  },
+  "animation/anims/chicken/world/chick_react03.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 64
+  },
+  "animation/anims/chicken/world/chick_react04.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 51
+  },
+  "animation/anims/chicken/world/chick_react05.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 51
+  },
+  "animation/anims/chicken/world/chick_scared01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 36
+  },
+  "animation/anims/chicken/world/chick_scared02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 26
+  },
+  "animation/anims/chicken/world/chick_sleep_flinch01.vnmclip+non_additive.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 18
+  },
+  "animation/anims/chicken/world/chick_sleep_flinch02.vnmclip+non_additive.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 12
+  },
+  "animation/anims/chicken/world/chick_sleep_flinch03.vnmclip+non_additive.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 15
+  },
+  "animation/anims/chicken/world/chick_squat_loop02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/chicken/chicken.vnmskel",
+    "additive": false,
+    "frames": 337
+  },
+  "animation/anims/viewmodel/chicken/chick_arms_draw.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 128
+  },
+  "animation/anims/viewmodel/chicken/chick_arms_idle01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 225
+  },
+  "animation/anims/viewmodel/chicken/chick_arms_idle02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 446
+  },
+  "animation/anims/viewmodel/chicken/chickbaby_arms_draw.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 54
+  },
+  "animation/anims/viewmodel/chicken/chickbaby_arms_idle01.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 188
+  },
+  "animation/anims/viewmodel/chicken/chickbaby_arms_idle02.vnmclip": {
+    "skeleton": "animation/skeletons/characters/worldmodel.vnmskel",
+    "additive": false,
+    "frames": 430
+  }
+}

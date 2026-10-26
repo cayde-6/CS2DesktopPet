@@ -1,0 +1,33 @@
+.DS_Store
+.AppleDouble
+.venv/
+*.bundle
+node_modules/
+build/
+*.log
+exceptions.txt
+
+# Game content is prepared locally and is never committed.
+Assets/*
+!Assets/README.md
+
+# Keep maintenance scripts and provenance, not SDKs, VPKs or export caches.
+tools/*
+!tools/*.py
+!tools/*.mjs
+!tools/*.swift
+!tools/vrf-all-clips.patch
+!tools/all-animation-clips.txt
+!tools/all-animation-metadata.json
+!tools/all-animation-files.txt
+!tools/behavior-files.txt
+!tools/chicken-files.txt
+!tools/models-files.txt
+!tools/files.txt
+!tools/render-materials/
+tools/render-materials/*
+!tools/render-materials/material-metadata.json
+!tools/render-materials/all-source-maps.txt
+!tools/render-materials/raw-maps.txt
+!tools/render-materials/aniso-maps.txt
+!tools/render-materials/depot-files.txt

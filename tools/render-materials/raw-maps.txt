@@ -1,0 +1,8 @@
+materials/models/chicken/chick_yellow_fur_vmat_g_tnormal_a4abff7d.vtex_c
+materials/models/chicken/chick_yellow_normal_psd_8a70e735.vtex_c
+materials/models/chicken/chicken_normal_psd_b7863629.vtex_c
+materials/models/chicken/chicken_normal_psd_d4ebb280.vtex_c
+materials/models/chicken/chicken_polish_normal_psd_6109d04.vtex_c
+materials/models/chicken/chicken_polish_normal_psd_be930d53.vtex_c
+materials/models/chicken/chicken_silkie_normal_psd_594664fe.vtex_c
+materials/models/chicken/chicken_silkie_normal_psd_88e714a8.vtex_c

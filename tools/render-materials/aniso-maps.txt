@@ -1,0 +1,3 @@
+materials/models/chicken/chicken_normal_psd_b7863629.vtex_c
+materials/models/chicken/chicken_silkie_normal_psd_88e714a8.vtex_c
+materials/models/chicken/chicken_polish_normal_psd_be930d53.vtex_c

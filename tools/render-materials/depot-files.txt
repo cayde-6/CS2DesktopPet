@@ -1,0 +1,5 @@
+game/csgo/pak01_141.vpk
+game/csgo/pak01_169.vpk
+game/csgo/pak01_494.vpk
+game/csgo/pak01_497.vpk
+game/csgo/pak01_501.vpk

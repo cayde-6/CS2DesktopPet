@@ -1,0 +1,27 @@
+--- a/ValveResourceFormat/IO/AnimationGraphLoader.cs
++++ b/ValveResourceFormat/IO/AnimationGraphLoader.cs
+@@ -32,6 +32,14 @@
+                 CollectClips(graphRef.GetStringProperty("m_hGraph"), fileLoader, visited, clipNames);
+             }
+ 
++            var explicitList = Environment.GetEnvironmentVariable("CS2_PET_CLIPLIST");
++            if (!string.IsNullOrEmpty(explicitList))
++            {
++                foreach (var clip in System.IO.File.ReadLines(explicitList))
++                {
++                    if (!string.IsNullOrWhiteSpace(clip) && visited.Add(clip)) clipNames.Add(clip);
++                }
++            }
+             return clipNames;
+         }
+ 
+--- a/ValveResourceFormat/Resource/ResourceTypes/Model.cs
++++ b/ValveResourceFormat/Resource/ResourceTypes/Model.cs
+@@ -500,6 +500,7 @@
+                 {
+                     if (fileLoader.LoadFileCompiled(clipName)?.DataBlock is ModelAnimation2.AnimationClip clip)
+                     {
++                        Console.WriteLine("PET_CLIP_META|" + clipName + "|" + clip.SkeletonName + "|" + clip.IsAdditive + "|" + clip.NumFrames);
+                         animations.Add(new ClipAnimation(clip));
+                     }
+                 }

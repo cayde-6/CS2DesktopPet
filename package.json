@@ -1,0 +1,21 @@
+{
+  "name": "cs2desktoppet",
+  "version": "1.3.0",
+  "description": "Offline macOS desktop pets using original CS2 models",
+  "scripts": {
+    "build": "./build.sh",
+    "test": "node tools/check-assets.mjs && node tools/verify-motion.mjs && node tools/verify-foot-plant.mjs && node tools/verify-activities.mjs && npm run test:placement",
+    "test:placement": "swiftc Sources/placement.swift tools/verify-placement.swift -o /tmp/cs2-pet-placement-check && /tmp/cs2-pet-placement-check",
+    "test:render": "python3 tools/verify-rendering.py",
+    "check:assets": "node tools/check-assets.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "esbuild": "0.25.11",
+    "three": "0.180.0"
+  },
+  "private": true
+}

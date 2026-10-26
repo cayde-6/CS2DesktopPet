@@ -1,0 +1,523 @@
+{
+  "chick_yellow": {
+    "Name": "materials/models/chicken/chick_yellow.vmat",
+    "ShaderName": "csgo_character.vfx",
+    "IntParams": {
+      "F_CLOTH_SHADING": 1,
+      "F_ENABLE_ADJUSTMENTS": 1,
+      "F_TINT_MASK": 1,
+      "g_bFogEnabled": 1,
+      "g_bMaskRoughnessAdjustmentsByTintMask": 0,
+      "g_nMaskDetailTextureByTintMask": 0,
+      "g_nScaleTexCoordUByModelScaleAxis": 0,
+      "g_nScaleTexCoordVByModelScaleAxis": 0,
+      "g_nTextureAddressModeU": 0,
+      "g_nTextureAddressModeV": 0
+    },
+    "FloatParams": {
+      "g_fBrightness": 1.118,
+      "g_fContrast": 1,
+      "g_fDetailBlendFactor": 1,
+      "g_fDetailBrightness": 1,
+      "g_fDetailContrast": 1,
+      "g_fDetailHueShift": 0,
+      "g_fDetailSaturation": 1,
+      "g_fHueShift": 1,
+      "g_flAmbientOcclusionMasking": 0.4,
+      "g_flDetailTexCoordRotation": 0,
+      "g_flModelTintAmount": 1,
+      "g_flSheenScale": 3,
+      "g_flTexCoordRotation": 0,
+      "g_fSaturation": 1,
+      "g_fTextureRoughnessBrightness": 1,
+      "g_fTextureRoughnessContrast": 1
+    },
+    "VectorParams": {
+      "g_flSheenTintColor": [
+        0.67451,
+        0.882353,
+        0.756863,
+        1
+      ],
+      "g_vColorTint": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "g_vDetailTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vDetailTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordCenter": [
+        0.5,
+        0.5,
+        0,
+        0
+      ],
+      "g_vTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordScrollSpeed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureRimMask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "TextureParams": {
+      "g_tAmbientOcclusion": "materials/models/chicken/chick_yellow_ao_psd_37bae21e.vtex",
+      "g_tColor": "materials/models/chicken/chick_yellow_color_psd_94e69b9b.vtex",
+      "g_tDetail": "materials/default/default_detail_tga_7a7467a1.vtex",
+      "g_tMetalness": "materials/models/chicken/chick_yellow_cloth_psd_50877ead.vtex",
+      "g_tNormal": "materials/models/chicken/chick_yellow_normal_psd_8a70e735.vtex",
+      "g_tTintMask": "materials/models/chicken/chick_tint_mask_psd_e4322026.vtex"
+    }
+  },
+  "chick_yellow_fur": {
+    "Name": "materials/models/chicken/chick_yellow_fur.vmat",
+    "ShaderName": "csgo_character.vfx",
+    "IntParams": {
+      "F_ALPHA_TEST": 1,
+      "F_CLOTH_SHADING": 1,
+      "F_DO_NOT_CAST_SHADOWS": 1,
+      "F_DONT_FLIP_BACKFACE_NORMALS": 1,
+      "F_ENABLE_ADJUSTMENTS": 1,
+      "F_RENDER_BACKFACES": 1,
+      "g_bFogEnabled": 1,
+      "g_nScaleTexCoordUByModelScaleAxis": 0,
+      "g_nScaleTexCoordVByModelScaleAxis": 0,
+      "g_nTextureAddressModeU": 0,
+      "g_nTextureAddressModeV": 0
+    },
+    "FloatParams": {
+      "g_fBrightness": 1,
+      "g_fContrast": 1,
+      "g_fDetailBlendFactor": 1,
+      "g_fDetailBrightness": 1,
+      "g_fDetailContrast": 1,
+      "g_fDetailHueShift": 0,
+      "g_fDetailSaturation": 1,
+      "g_fHueShift": 1,
+      "g_flAlphaTestReference": 0.2,
+      "g_flAmbientOcclusionMasking": 0.4,
+      "g_flAntiAliasedEdgeStrength": 0,
+      "g_flDetailTexCoordRotation": 0,
+      "g_flModelTintAmount": 1,
+      "g_flSheenScale": 3,
+      "g_flTexCoordRotation": 0,
+      "g_fSaturation": 1,
+      "g_fTextureRoughnessBrightness": 1,
+      "g_fTextureRoughnessContrast": 1
+    },
+    "VectorParams": {
+      "g_flSheenTintColor": [
+        0.67451,
+        0.882353,
+        0.756863,
+        1
+      ],
+      "g_vColorTint": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "g_vDetailTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vDetailTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordCenter": [
+        1,
+        0.5,
+        0,
+        0
+      ],
+      "g_vTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordScrollSpeed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureAmbientOcclusion": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "TextureDetail": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureMetalness": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureRimMask": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureRoughness": [
+        0.737255,
+        0.737255,
+        0.737255,
+        1
+      ]
+    },
+    "TextureParams": {
+      "g_tAmbientOcclusion": "materials/models/chicken/chick_yellow_fur_vmat_g_tambientocclusion_9782fd5c.vtex",
+      "g_tColor": "materials/models/chicken/chick_yellow_fur_color_psd_e1db1d33.vtex",
+      "g_tDetail": "materials/default/default_detail_tga_7a7467a1.vtex",
+      "g_tMetalness": "materials/models/chicken/chick_yellow_fur_cloth_psd_366b8d3.vtex",
+      "g_tNormal": "materials/models/chicken/chick_yellow_fur_vmat_g_tnormal_a4abff7d.vtex"
+    }
+  },
+  "chicken_catalan_tan": {
+    "Name": "materials/models/chicken/chicken_catalan_tan.vmat",
+    "ShaderName": "csgo_character.vfx",
+    "IntParams": {
+      "F_ANISOTROPIC_GLOSS": 1,
+      "F_ENABLE_ADJUSTMENTS": 1,
+      "F_SPHERICAL_PROJECTED_ANISOTROPIC_TANGENTS": 1,
+      "F_TINT_MASK": 1,
+      "g_bFogEnabled": 1,
+      "g_bMaskRoughnessAdjustmentsByTintMask": 1,
+      "g_nMaskDetailTextureByTintMask": 0,
+      "g_nScaleTexCoordUByModelScaleAxis": 0,
+      "g_nScaleTexCoordVByModelScaleAxis": 0,
+      "g_nTextureAddressModeU": 0,
+      "g_nTextureAddressModeV": 0
+    },
+    "FloatParams": {
+      "g_fBrightness": 1,
+      "g_fContrast": 1,
+      "g_fDetailBlendFactor": 1,
+      "g_fDetailBrightness": 1,
+      "g_fDetailContrast": 1,
+      "g_fDetailHueShift": 0,
+      "g_fDetailSaturation": 1,
+      "g_fHueShift": 0,
+      "g_flAmbientOcclusionMasking": 0.4,
+      "g_flDetailTexCoordRotation": 0,
+      "g_flModelTintAmount": 1,
+      "g_flTexCoordRotation": 0,
+      "g_fSaturation": 1,
+      "g_fTextureRoughnessBrightness": 1,
+      "g_fTextureRoughnessContrast": 1,
+      "g_vSphericalAnisotropyAngle": 0
+    },
+    "VectorParams": {
+      "g_vColorTint": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "g_vDetailTexCoordOffset": [
+        -0.375,
+        -0.375,
+        0,
+        0
+      ],
+      "g_vDetailTexCoordScale": [
+        0.25,
+        0.25,
+        0,
+        0
+      ],
+      "g_vSphericalAnisotropyPole": [
+        -0.022,
+        0,
+        -0.311,
+        0
+      ],
+      "g_vTexCoordCenter": [
+        0.5,
+        0.5,
+        0,
+        0
+      ],
+      "g_vTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordScrollSpeed": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "TextureParams": {
+      "g_tAmbientOcclusion": "materials/models/chicken/chicken_ao_psd_2176d656.vtex",
+      "g_tAnisoGloss": "materials/models/chicken/chicken_normal_psd_b7863629.vtex",
+      "g_tColor": "materials/models/chicken/chicken_catalan_tan_color_psd_37a4e69b.vtex",
+      "g_tDetail": "materials/models/chicken/chicken_catalan_face_detail_psd_e423e3ee.vtex",
+      "g_tMetalness": "materials/default/default_metal_tga_dbfb4d6e.vtex",
+      "g_tNormal": "materials/models/chicken/chicken_normal_psd_d4ebb280.vtex",
+      "g_tTintMask": "materials/models/chicken/chicken_catalan_01_tint_mask_psd_e296063b.vtex"
+    }
+  },
+  "chicken_silkie_white": {
+    "Name": "materials/models/chicken/chicken_silkie_white.vmat",
+    "ShaderName": "csgo_character.vfx",
+    "IntParams": {
+      "F_ANISOTROPIC_GLOSS": 1,
+      "F_ENABLE_ADJUSTMENTS": 1,
+      "F_IRIDESCENCE": 1,
+      "F_SPHERICAL_PROJECTED_ANISOTROPIC_TANGENTS": 1,
+      "F_TINT_MASK": 1,
+      "g_bFogEnabled": 1,
+      "g_bMaskRoughnessAdjustmentsByTintMask": 0,
+      "g_nMaskDetailTextureByTintMask": 0,
+      "g_nScaleTexCoordUByModelScaleAxis": 0,
+      "g_nScaleTexCoordVByModelScaleAxis": 0,
+      "g_nTextureAddressModeU": 0,
+      "g_nTextureAddressModeV": 0
+    },
+    "FloatParams": {
+      "g_fBrightness": 1,
+      "g_fContrast": 1,
+      "g_fDetailBlendFactor": 1,
+      "g_fDetailBrightness": 1,
+      "g_fDetailContrast": 1,
+      "g_fDetailHueShift": 0,
+      "g_fDetailSaturation": 1,
+      "g_fHueShift": 0,
+      "g_flAmbientOcclusionMasking": 0.4,
+      "g_flDetailTexCoordRotation": 0,
+      "g_flIridescentFresnelStrength": 0.077,
+      "g_flIridescentHueShift": 0.01,
+      "g_flIridescentStrength": 1.5,
+      "g_flModelTintAmount": 1,
+      "g_flTexCoordRotation": 0,
+      "g_fSaturation": 1,
+      "g_fTextureRoughnessBrightness": 1,
+      "g_fTextureRoughnessContrast": 1,
+      "g_vSphericalAnisotropyAngle": 0
+    },
+    "VectorParams": {
+      "g_vColorTint": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "g_vDetailTexCoordOffset": [
+        -0.25,
+        -0.25,
+        0,
+        0
+      ],
+      "g_vDetailTexCoordScale": [
+        0.5,
+        0.5,
+        0,
+        0
+      ],
+      "g_vSphericalAnisotropyPole": [
+        -0.022,
+        0,
+        -0.017,
+        0
+      ],
+      "g_vTexCoordCenter": [
+        0.5,
+        0.5,
+        0,
+        0
+      ],
+      "g_vTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordScrollSpeed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureIridescentThickness": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "TextureRimMask": [
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "TextureParams": {
+      "g_tAmbientOcclusion": "materials/models/chicken/chicken_silkie_ao_psd_90d0a19d.vtex",
+      "g_tAnisoGloss": "materials/models/chicken/chicken_silkie_normal_psd_88e714a8.vtex",
+      "g_tColor": "materials/models/chicken/chicken_silkie_white_color_psd_880b0ac3.vtex",
+      "g_tDetail": "materials/models/chicken/chicken_silkie_1_detail_psd_28afe873.vtex",
+      "g_tIridescentThickness_Mask": "materials/models/chicken/chicken_silkie_iridescence_psd_4b04eed3.vtex",
+      "g_tMetalness": "materials/models/chicken/chicken_silkie_white_vmat_g_tmetalness_b70f8f59.vtex",
+      "g_tNormal": "materials/models/chicken/chicken_silkie_normal_psd_594664fe.vtex",
+      "g_tTintMask": "materials/models/chicken/chicken_silkie_tint_mask_psd_f811b929.vtex"
+    }
+  },
+  "chicken_polish_brown": {
+    "Name": "materials/models/chicken/chicken_polish_brown.vmat",
+    "ShaderName": "csgo_character.vfx",
+    "IntParams": {
+      "F_ANISOTROPIC_GLOSS": 1,
+      "F_ENABLE_ADJUSTMENTS": 1,
+      "F_SPHERICAL_PROJECTED_ANISOTROPIC_TANGENTS": 1,
+      "F_TINT_MASK": 1,
+      "g_bFogEnabled": 1,
+      "g_bMaskRoughnessAdjustmentsByTintMask": 1,
+      "g_nMaskDetailTextureByTintMask": 2,
+      "g_nScaleTexCoordUByModelScaleAxis": 0,
+      "g_nScaleTexCoordVByModelScaleAxis": 0,
+      "g_nTextureAddressModeU": 0,
+      "g_nTextureAddressModeV": 0
+    },
+    "FloatParams": {
+      "g_fBrightness": 1,
+      "g_fContrast": 1,
+      "g_fDetailBlendFactor": 1,
+      "g_fDetailBrightness": 1,
+      "g_fDetailContrast": 1,
+      "g_fDetailHueShift": 0,
+      "g_fDetailSaturation": 1,
+      "g_fHueShift": 0,
+      "g_flAmbientOcclusionMasking": 0.4,
+      "g_flDetailTexCoordRotation": 0,
+      "g_flModelTintAmount": 1,
+      "g_flTexCoordRotation": 0,
+      "g_fSaturation": 1,
+      "g_fTextureRoughnessBrightness": 1,
+      "g_fTextureRoughnessContrast": 1,
+      "g_vSphericalAnisotropyAngle": 0
+    },
+    "VectorParams": {
+      "g_vColorTint": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "g_vDetailTexCoordOffset": [
+        -0.375,
+        -0.375,
+        0,
+        0
+      ],
+      "g_vDetailTexCoordScale": [
+        0.25,
+        0.25,
+        0,
+        0
+      ],
+      "g_vSphericalAnisotropyPole": [
+        -0.022,
+        0,
+        -0.311,
+        0
+      ],
+      "g_vTexCoordCenter": [
+        0.5,
+        0.5,
+        0,
+        0
+      ],
+      "g_vTexCoordOffset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "g_vTexCoordScale": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "g_vTexCoordScrollSpeed": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "TextureParams": {
+      "g_tAmbientOcclusion": "materials/models/chicken/chicken_polish_ao_psd_ec5e19c4.vtex",
+      "g_tAnisoGloss": "materials/models/chicken/chicken_polish_normal_psd_be930d53.vtex",
+      "g_tColor": "materials/models/chicken/chicken_polish_brown_color_psd_1fbf6413.vtex",
+      "g_tDetail": "materials/models/chicken/chicken_polish_face_detail_psd_8eb4c7a5.vtex",
+      "g_tMetalness": "materials/default/default_metal_tga_dbfb4d6e.vtex",
+      "g_tNormal": "materials/models/chicken/chicken_polish_normal_psd_6109d04.vtex",
+      "g_tTintMask": "materials/models/chicken/chicken_polish_brown_tint_mask_psd_945fed9a.vtex"
+    }
+  }
+}
